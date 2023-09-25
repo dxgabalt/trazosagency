@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Trazos Agency</title>
+    <link rel="icon" href="logo.jpg">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Gris claro */
+            color: #333; /* Texto negro */
+        }
+
+        header {
+            background-color: #752fe6; /* Morado */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #fff; /* Texto blanco */
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+        }
+
+        .logo img {
+    max-width: 100px; /* Ancho máximo del logotipo */
+    border-radius: 60px;
+}
+
+        /* Estilos para hacer el sitio responsive */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px; /* Reduce el espacio del encabezado en pantallas pequeñas */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Reduce el espacio entre elementos de navegación en pantallas pequeñas */
+    }
+
+    section {
+        padding: 10px; /* Reduce el espacio de las secciones en pantallas pequeñas */
+    }
+
+    footer {
+        padding: 10px 0; /* Reduce el espacio del pie de página en pantallas pequeñas */
+    }
+
+    footer p {
+        font-size: 12px; /* Reduce el tamaño del texto del pie de página en pantallas pequeñas */
+    }
+}
+
+
+        /* Estilos para la página de Portafolio */
+        section#portafolio {
+            background-color: #fff; /* Fondo blanco */
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        section#portafolio h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #752fe6; /* Morado */
+        }
+
+        .portfolio-slider {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .portfolio-item {
+            background-color: #f9f9f9; /* Fondo gris claro */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .img-container {
+            overflow: hidden;
+            width: 150px;
+            height: 150px; /* Cambié la altura máxima a 100px para que sea cuadrada */
+            margin-bottom: 20px; /* Espacio entre la imagen y los detalles */
+            border-radius: 10px;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .img-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .details {
+            flex-grow: 1; /* Los detalles ocupan el espacio restante */
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #333; /* Texto negro */
+        }
+
+        p.description {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #333; /* Texto negro */
+        }
+
+        button.show-details-button {
+            background-color: #752fe6; /* Morado */
+            color: #fff; /* Texto blanco */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px auto; /* Centra vertical y horizontalmente */
+            display: block; /* Para que ocupe el ancho completo del contenedor */
+            transition: background-color 0.3s;
+        }
+
+        button.show-details-button:hover {
+            background-color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+        }
+
+        .details {
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #333; /* Fondo gris oscuro */
+            color: #fff; /* Texto blanco */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Estilos para el enlace de Inicio en el pie de página */
+        footer a {
+            color: #752fe6; /* Morado */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo de Trazos Agency">
+            </div>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="portafolio">
+        <h2>Nuestro Portafolio</h2>
+        <div class="portfolio-slider">
+            <div class="portfolio-item">
+                <div class="img-container">
+                    <img src="portafolio1.jpg" alt="Project 1">
+                </div>
+                <h3>Re Branding para marca nacional
+                    AMILI</h3>
+                <button class="show-details-button">Mostrar Detalles</button>
+                <div class="details">
+                    <p>Productos hechos a base de ajonjolí negro para uso cosmético y culinarios
+
+                        Diseño 2021 by @trazosagency
+                        
+                        ¡Conectamos tus ideas! Escríbenos ✨
+                        
+                        #branding #packaging #trazos</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="img-container">
+                    <img src="portafolio2.jpg" alt="Project 2">
+                </div>
+                <h3>Re Branding para marca nacional NATIVOS</h3>
+                <button class="show-details-button">Mostrar Detalles</button>
+                <div class="details">
+                    <p>Productos hechos a mano a base de cuero por manos artesanales del departamento de Masaya, Nicaragua.
+
+                        Diseño 2021 by @trazosagency
+                        
+                        ¿Te gustaría mejorar la imagen de tu marca o empresa?
+                        ¡Contáctanos!
+                        
+                        #branding #packing #trazos</p>
+                </div>
+            </div>
+            <!-- Agregar más elementos portfolio-item  -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Trazos Agency | <a href="index.html">Inicio</a></p>
+    </footer>
+
+    <script>
+        // JavaScript para mostrar/ocultar detalles de los proyectos
+        document.addEventListener('DOMContentLoaded', function () {
+            const showDetailsButtons = document.querySelectorAll('.show-details-button');
+
+            showDetailsButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const details = button.nextElementSibling;
+                    if (details.style.display === 'block') {
+                        details.style.display = 'none';
+                        button.textContent = 'Mostrar Detalles';
+                    } else {
+                        details.style.display = 'block';
+                        button.textContent = 'Ocultar Detalles';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

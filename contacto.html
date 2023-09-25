@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Trazos Agency</title>
+    <link rel="icon" href="logo.jpg">
+
+    <style>
+        /* Estilos para la página de Contacto */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Gris claro */
+            color: #333; /* Texto negro */
+        }
+
+        header {
+            background-color: #752fe6; /* Morado */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #fff; /* Texto blanco */
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+        }
+
+        .logo img {
+    max-width: 100px; /* Ancho máximo del logotipo */
+    border-radius: 60px;
+}
+
+        /* Estilos para hacer el sitio responsive */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px; /* Reduce el espacio del encabezado en pantallas pequeñas */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Reduce el espacio entre elementos de navegación en pantallas pequeñas */
+    }
+
+    section {
+        padding: 10px; /* Reduce el espacio de las secciones en pantallas pequeñas */
+    }
+
+    footer {
+        padding: 10px 0; /* Reduce el espacio del footer en pantallas pequeñas */
+    }
+
+    footer p {
+        font-size: 12px; /* Reduce el tamaño del texto del footer en pantallas pequeñas */
+    }
+}
+        /* Estilos específicos para la página de Contacto */
+        section {
+            padding: 20px;
+        }
+
+        section#contacto {
+            background-color: #fff; /* Fondo blanco */
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        section#contacto h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #752fe6; /* Morado */
+        }
+
+
+        section#contacto li {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #333; /* Texto negro */
+        }
+
+        /* Estilos para el formulario de contacto */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+
+        .contact-form button {
+            background-color: #752fe6; /* Morado */
+            color: #fff; /* Texto blanco */
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .contact-form button:hover {
+            background-color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #333; /* Fondo gris oscuro */
+            color: #fff; /* Texto blanco */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Estilos para el enlace de Inicio en el pie de página */
+        footer a {
+            color: #752fe6; /* Morado */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo de Trazos Agency">
+            </div>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>No dudes en ponerte en contacto con nosotros para consultas o colaboraciones. ¡Nos encantaría saber de ti!</p>
+    </section>
+
+    <div class="contact-form">
+        <h3>Formulario de Contacto</h3>
+        <form action="#" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="email" name="email" placeholder="Correo Electrónico">
+            <textarea name="mensaje" placeholder="Mensaje"></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Trazos Agency | <a href="index.html">Inicio</a></p>
+    </footer>
+</body>
+</html>

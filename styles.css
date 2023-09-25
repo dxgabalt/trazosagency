@@ -1,0 +1,293 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Gris claro */
+    color: #333; /* Texto negro */
+}
+
+header {
+    background-color: #752fe6; 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px; /* Ancho máximo del logotipo */
+    border-radius: 60px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+}
+
+/* Estilos para la sección de banner */
+section.banner {
+    background: linear-gradient(to bottom, #fff, #f2f2f2); /* Fondo degradado de blanco a gris claro */
+    color: #333; /* Texto negro */
+    padding: 100px 0;
+    text-align: center;
+}
+
+section.banner h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold; /* Texto en negrita */
+}
+
+section.banner p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-style: italic; /* Texto en cursiva */
+}
+
+/* Estilos para el emoji */
+section.banner p span {
+    font-size: 24px; /* Tamaño del emoji */
+}
+
+/* Estilos para el botón de contacto */
+.banner-button {
+    display: inline-block;
+    background-color: #e2a40d; /* Amarillo dorado */
+    color: #fff; /* Texto blanco */
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px; /* Botón redondeado */
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.banner-button:hover {
+    background-color: #ffdd00; /* Color amarillo más brillante al pasar el mouse */
+}
+
+/* Estilos para las secciones (Inicio, Portafolio, Nosotros, Contacto) */
+section {
+    padding: 20px;
+}
+
+/* Estilos para la sección de Portafolio en index.html */
+section#portafolio {
+    background-color: #fff; /* Fondo blanco */
+    padding: 50px 0;
+    text-align: center;
+}
+
+section#portafolio h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #752fe6; /* Morado */
+}
+
+.portfolio-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio entre el carrusel y el botón */
+}
+
+.portfolio-item {
+    background-color: #f9f9f9; /* Fondo gris claro */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 150px; /* Ancho máximo de la imagen */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.portfolio-item h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333; /* Texto negro */
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333; /* Texto negro */
+}
+
+.view-more-button {
+    background-color: #752fe6; /* Morado */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none; /* decoración de enlace */
+    margin: 0 auto; /* Centrar horizontalmente el botón */
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.view-more-button:hover {
+    background-color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+}
+
+
+
+/* Estilos para la sección de Nosotros */
+section#nosotros {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    padding: 50px 0;
+    text-align: center;
+}
+
+section#nosotros h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #752fe6; /* Morado */
+}
+
+section#nosotros p {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #333; /* Texto negro */
+}
+
+/* Estilos para la sección de Contacto */
+section#contacto {
+    background-color: #fff; /* Fondo blanco */
+    padding: 50px 0;
+    text-align: center;
+}
+
+section#contacto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #752fe6; /* Morado */
+}
+
+section#contacto p {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #333; /* Texto negro */
+}
+
+section#contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+section#contacto li {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #666; /* Texto gris */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Estilos para el enlace de Inicio en el footer */
+footer a {
+    color: #752fe6; /* Morado */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+}
+
+/* Estilos para los botones de sección en index.html */
+.section-button {
+    background-color: #752fe6; /* Morado */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none; /* Quitar la decoración de enlace */
+    margin-top: 20px; /* Espacio superior */
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.section-button:hover {
+    background-color: #e2a40d; /* Amarillo dorado al pasar el mouse */
+}
+
+
+
+/* Estilos para hacer el sitio responsive */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px; /* Reduce el espacio del encabezado en pantallas pequeñas */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Reduce el espacio entre elementos de navegación en pantallas pequeñas */
+    }
+
+    section.banner {
+        padding: 80px 0; /* Reduce el espacio del banner en pantallas pequeñas */
+    }
+
+    section.banner h2 {
+        font-size: 24px; /* Reduce el tamaño del título del banner en pantallas pequeñas */
+    }
+
+    section.banner p {
+        font-size: 16px; /* Reduce el tamaño del texto del banner en pantallas pequeñas */
+    }
+
+    section {
+        padding: 10px; /* Reduce el espacio de las secciones en pantallas pequeñas */
+    }
+
+    footer {
+        padding: 10px 0; /* Reduce el espacio del footer en pantallas pequeñas */
+    }
+
+    footer p {
+        font-size: 12px; /* Reduce el tamaño del texto del footer en pantallas pequeñas */
+    }
+}
